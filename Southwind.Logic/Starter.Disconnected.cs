@@ -33,6 +33,7 @@ using Signum.Entities.Help;
 using Signum.Entities.Word;
 using Signum.Entities.Migrations;
 using Signum.Entities.Excel;
+using Signum.Entities.MachineLearning;
 
 namespace Southwind.Logic
 {
@@ -87,6 +88,9 @@ namespace Southwind.Logic
             DisconnectedLogic.Register<AppendixHelpEntity>(Download.None, Upload.None);
             DisconnectedLogic.Register<QueryHelpEntity>(Download.None, Upload.None);
             DisconnectedLogic.Register<OperationHelpEntity>(Download.None, Upload.None);
+
+            //Signum.Entities.MachineLearning
+            DisconnectedLogic.Register<PredictorEntity>(Download.None, Upload.None);
 
             //Signum.Entities.ControlPanel
             DisconnectedLogic.Register<DashboardEntity>(Download.None, Upload.None);

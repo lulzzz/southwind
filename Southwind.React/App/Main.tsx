@@ -40,6 +40,7 @@ import * as SchedulerClient from "../../Extensions/Signum.React.Extensions/Sched
 import * as TranslationClient from "../../Extensions/Signum.React.Extensions/Translation/TranslationClient"
 import * as DiffLogClient from "../../Extensions/Signum.React.Extensions/DiffLog/DiffLogClient"
 import * as CultureClient from "../../Extensions/Signum.React.Extensions/Translation/CultureClient"
+import * as PredictorClient from "../../Extensions/Signum.React.Extensions/MachineLearning/PredictorClient"
 import DynamicQueryOmniboxProvider from "../../Extensions/Signum.React.Extensions/Omnibox/DynamicQueryOmniboxProvider"
 import EntityOmniboxProvider from "../../Extensions/Signum.React.Extensions/Omnibox/EntityOmniboxProvider"
 import SpecialOmniboxProvider from "../../Extensions/Signum.React.Extensions/Omnibox/SpecialOmniboxProvider"
@@ -127,6 +128,7 @@ function reload() {
                 ChartClient.start({ routes });
                 DashboardClient.start({ routes });
                 MapClient.start({ routes, auth: true, cache: true, disconnected: true, isolation: false });
+                PredictorClient.start({ routes });
 
                 SouthwindClient.start({ routes });
 

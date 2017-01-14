@@ -53,6 +53,7 @@ using Signum.Engine.DiffLog;
 using Signum.Entities.DiffLog;
 using Signum.Engine.Map;
 using Signum.Engine.Excel;
+using Signum.Engine.MachineLearning;
 
 namespace Southwind.Logic
 {
@@ -121,6 +122,7 @@ namespace Southwind.Logic
             DiffLogLogic.Start(sb, dqm);
             ExcelLogic.Start(sb, dqm, excelReport: true);
             ExceptionLogic.Start(sb, dqm);
+            PredictorLogic.Start(sb, dqm);
 
             SMSLogic.Start(sb, dqm, null, () => Configuration.Value.Sms);
             SMSLogic.RegisterPhoneNumberProvider<PersonEntity>(p => p.Phone, p => null);
